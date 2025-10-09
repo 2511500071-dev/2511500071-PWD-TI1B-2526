@@ -1,3 +1,5 @@
-﻿## pertemuan-02
+﻿# pertemuan-02
+NIM: 2511500071
+NAMA: Raja Rahmadhan B
 
-Catatan untuk pertemuan-02.
+Hari ini, Rabu 01.oktober.2005 saya mempelajari:
