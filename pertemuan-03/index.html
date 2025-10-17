@@ -27,6 +27,12 @@
         margin-bottom: 16px;
     }
 
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     #about p {
         display: flex;
         justify-content: flex-start;
@@ -45,6 +51,40 @@
         flex-shrink: 0;
     }
 
+    #contact label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+        width: 100%;
+
+    }
+    
+    #contact label span {
+        font-weight: 600;
+        color: #c06f12;
+        margin-bottom: 4px;
+        text-align: left;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #e6e6e6;
+        border-radius: 4px;
+        text-align: left;
+        font-family: inherit;
+        box-sizing: border-box;
+    }
+
+    #contact button {
+        margin-top: 10px;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 5px;
+        background-color: #c06f12;
+    }
+
     @media (max-width: 600px){
         #about p {
             flex-direction: column;
@@ -57,14 +97,6 @@
         }
     }
 
-    #contact {
-        background-color: rgb 100, 149, 165;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 700px;
-        margin: 20px auto;
-        box-decoration-break: 0 2px 5px rgba(0, 0, 0, 0, 1);
-    }
     </style>
 </head>
 <body>
@@ -89,8 +121,8 @@
             <p><strong>Nama Lengkap:</strong> Raja Rahmadhan Berniko</p>
             <p><strong>Tempat Lahir:</strong> Sungailiat</p>
             <p><strong>Tanggal: Lahir</strong> 18 Oktober 2005</p>
-            <p><strong>Hobi:</strong> basket</p>
-            <p><strong>Pasangan:</strong> jomblo Abadi</p>
+            <p><strong>Hobi:</strong> Basket</p>
+            <p><strong>Pasangan:</strong> Bunga Lestari</p>
             <p><strong>Pekerjaan:</strong> Mahasiswa</p>
             <p><strong>Nama Ayah:</strong> Bobory niko SH.,MSi</p>
             <p><strong>Nama Ibu:</strong> Anita Paulina</p>
@@ -100,36 +132,9 @@
          </section>
          <section id="contact">
             <h2>Kontak kami</h2>
-            <style>
-                #about {
-                    background-color: #ffffff;
-                    border-radius: 10px;
-                    padding: 20;
-                    max-width: 700px;
-                    margin: 20px auto;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                }
-
-                #contact {
-                    background-color: #c06f12;
-                    border-radius: 10px;
-                    padding: 20px;
-                    max-width: 700px;
-                    margin: 20px auto;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                }
-
-                #contact h2 {
-                    color: #ffffff;
-                    border-bottom: 2px solid #ffffff;
-                    padding-bottom: 6px;
-                    margin-top: 0;
-                    margin-bottom: 16px;
-                }
-
-            </style>
+            
             <form action="" method="get">
-                <label for="txtNama"><span>Nama:</span>
+                <label for="txtNama"><span> Nama:</span>
                   <input type="text" id="txtNama" name="txt Nama" placeholder="Masukan nama" required autocomplete="name">
                 </label>
                 <label for="txtEmail"><span>Email:</span>
