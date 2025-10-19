@@ -14,5 +14,8 @@ Hari ini, Kamis 09 Oktober 2025, saya belajar:
   <li>membuat styling untuk selector ID #about elemen strong</li>
   <li>membuat styling untuk selector ID #about mode responsif (mobile)</li>
   <li>membuat styling untuk selector ID #contact</li>
-  <;i>membuat styling untuk selector ID #contact grup</li>
+  <li>membuat styling untuk selector ID #contact grup</li>
+  <li>membuat styling untuk selector ID #contact upgrade struktur form</li>
+  <li>membuat styling untuk selector ID #contact #contact styling tombol</li>
+  <li>membuat styling untuk selector ID #contact #contact styling tombol
 </ol>
