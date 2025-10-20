@@ -1,26 +1,57 @@
- * 
-    #header {
-        background-color: #c06f12;
-        color: #e6e6e6;
-        padding: 20px;
-        text-align: center;
+   * {
+  box-sizing: border-box;
+}
 
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 
-    #header ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-        margin: 10px 0 0;
-    }
+header {
+  background: #3e2723;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-    #header li a {
-        color: #e6e6e6;
-        text-decoration: none;
-        padding: 6px 12px;
-    }
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
 
+header li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+}
+
+header li a:hover {
+  background-color: #77540a;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+header li a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  border-radius: 6px;
+  background-color: rgba(178, 28, 28, 0.15);
+}
+
+header li a:active {
+  background-color: #c06f12;
+  transform: translateY(1px);
+}
+
+#home p {
+    text-align: justify;
+}
+
+    #home,
     #about,
     #contact {
         background-color: #c06f12;
@@ -32,6 +63,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    #home h2,
     #about h2,
     #contact h2 {
         color: #e6e6e6;
