@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Raja Rahmadhan</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f5f2ee, #f1e5d1);
+      color: #333;
+    }
+
+    header {
+      background-color: #8e4f07;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    #home h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #about,
+    #contact {
+      background-color: #c06f12;
+      color: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      max-width: 800px;
+      margin: 40px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #about h2,
+    #contact h2 {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 8px;
+      margin-top: 0;
+    }
+
+    #about p,
+    #contact label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      margin: 0;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    #about strong,
+    #contact label > span {
+      min-width: 180px;
+      font-weight: 600;
+      padding-right: 16px;
+      flex-shrink: 0;
+    }
+
+    #contact input,
+    #contact textarea {
+      flex: 1;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 4px 0;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: none;
+      box-shadow: 0 0 5px #fff;
+    }
+
+    #contact button {
+      margin-top: 16px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      font-weight: 600;
+    }
+
+    #contact button[type="submit"] {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    #contact button[type="submit"]:hover {
+      background-color: #ffb800;
+      transform: scale(1.05);
+    }
+
+    #contact button[type="reset"] {
+      background-color: #f5f5f5;
+      color: #000;
+    }
+
+    #contact button[type="reset"]:hover {
+      background-color: #b80000;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #8e4f07;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 8px 0;
+      }
+
+      #about p,
+      #contact label {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #about strong,
+      #contact label > span {
+        text-align: left;
+        margin-bottom: 6px;
+      }
+
+      #contact input,
+      #contact textarea,
+      #contact button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Selamat Datang</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Selamat datang</h2>
+      <p>Ini contoh paragraf HTML</p>
+    </section>
+
+    <section id="about">
+      <h2>About RAJA RAHMADHAN BERNIKO</h2>
+      <p><strong>NIM:</strong> 2511500071</p>
+      <p><strong>Nama Lengkap:</strong> Raja Rahmadhan Berniko</p>
+      <p><strong>Tempat Lahir:</strong> Sungailiat</p>
+      <p><strong>Tanggal Lahir:</strong> 18 Oktober 2005</p>
+      <p><strong>Hobi:</strong> Basket</p>
+      <p><strong>Pasangan:</strong> Bunga Lestari</p>
+      <p><strong>Pekerjaan:</strong> Mahasiswa</p>
+      <p><strong>Nama Ayah:</strong> Bobory niko SH.,MSi</p>
+      <p><strong>Nama Ibu:</strong> Anita Paulina</p>
+      <p><strong>Adek Pertama:</strong> Fitiya Salamah Aini</p>
+      <p><strong>Adek Kedua:</strong> Ahmad Syafaat Zhafar</p>
+      <p><strong>Adek Ketiga:</strong> Aqila Ghaziyah Amirah</p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <form action="" method="get">
+        <label for="txtNama"><span>Nama:</span>
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required />
+        </label>
+        <label for="txtEmail"><span>Email:</span>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required />
+        </label>
+        <label for="txtPesan"><span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+        </label>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Raja Rahmadhan Berniko [2511500071]</p>
+  </footer>
+</body>
+</html>
