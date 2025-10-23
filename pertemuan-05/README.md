@@ -9,4 +9,7 @@ Hari ini, Kamis 27 Oktober 2025, saya belajar:
   <li> copy paste index.html dan sty;e.css dari pertemuan-04</li>
   <li> tombol hamburger</li>
   <li> class menu-toggle</li>
+  <li> class menu-toggle mobile</li>
+  <li>
+  <li>
 </li>

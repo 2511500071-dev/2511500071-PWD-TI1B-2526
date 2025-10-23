@@ -150,6 +150,20 @@ header li a:active {
     }
 
     @media (max-width:600px) {
+
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            left: 16px;
+            top: 8px;
+        }
+
+        header {
+            background: #3e2723;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
         #about p,
         #contact label {
             flex-direction: column;
