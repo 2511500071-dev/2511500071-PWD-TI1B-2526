@@ -166,6 +166,10 @@ header li a:active {
             padding: 5px 0;
         }
 
+        nav.active {
+            display: flex;
+        }
+
         header {
             background: #3e2723;
             color: #fff;
