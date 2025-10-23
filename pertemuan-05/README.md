@@ -11,5 +11,6 @@ Hari ini, Kamis 27 Oktober 2025, saya belajar:
   <li> class menu-toggle</li>
   <li> class menu-toggle mobile</li>
   <li> styling nav mobile</li>
-  <li>membuat script.js</li>
+  <li> styling nav mobile class active</li>
+  <li> membuat script.js</li>
 </li>
