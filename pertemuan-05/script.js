@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function() {
+  let namaUser = prompt("Siapa nama kamu?");
+  if (namaUser && namaUser.trim() !== "") {
+    alert("Halo, " + namaUser + "!");
+  } else {
+    namaUser = "Pengunjung";
+  }
+
+  const homeSection = document.getElementById("home");
+  if (homeSection) {
+    const ucapan = document.createElement("p");
+    ucapan.textContent = "Haloo gess!! Selamat datang di halaman saya ya, " + namaUser + " 😄";
+    homeSection.appendChild(ucapan);
+  }
+
+  const pesanEl = document.getElementById("pesan");
+  if (pesanEl) pesanEl.innerText = "Halo, " + namaUser + "!";
+
+  const namaInput = document.getElementById("txtNama");
+  if (namaInput) namaInput.value = namaUser;
+});
+
 const menuButton = document.getElementById("menuToggle");
 
 menuButton.addEventListener("click", function () {
@@ -9,6 +31,10 @@ menuButton.addEventListener("click", function () {
   } else {
     this.textContent = "\u2630";
   }
+
+  console.log("wulan dari cantik");
+  document.getElementById("txtNama").value = "wulan dari memang cantik";
+  document.getElementById("txtPesan").value = "monika ge cion wo";
 });
 
 document.querySelector("form").addEventListener("submit", function (e) {
@@ -100,10 +126,3 @@ window.addEventListener("resize", () => {
     if (target) alignErrorMessage(small, target);
   });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-  const homesection = document.getElementById("home");
-  const ucapan = document.createElement("p");
-  ucapan.textContent = "Haloo gess!! Selamat datang di halaman saya ya";
-  homesection.appendChild(ucapan)
-}); 
