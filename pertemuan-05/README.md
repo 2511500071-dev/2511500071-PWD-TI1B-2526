@@ -13,5 +13,6 @@ Hari ini, Kamis 27 Oktober 2025, saya belajar:
   <li> styling nav mobile</li>
   <li> styling nav mobile class active</li>
   <li> membuat script.js</li>
-  <li> validasi formulir sebelum submit</li>
+  <li> latihan validasi formulir sebelum submit</li>
+  <li> latihan ganti teks tombol saat menu aktif</li>
 </li>
