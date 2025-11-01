@@ -16,4 +16,5 @@ Hari ini, Kamis 27 Oktober 2025, saya belajar:
   <li> validasi formulir sebelum submit</li>
   <li> menambahkan validasi formulir sebelum submit dan ganti teks tombol saat menu aktif</li>
   <li> ucapan otomatis saat halaman dimuat</li>
+  <li> hitung jumlah karakter pesan</li>
 </li>
