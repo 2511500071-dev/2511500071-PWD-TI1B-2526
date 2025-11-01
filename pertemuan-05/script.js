@@ -2,14 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
   let namaUser = prompt("Siapa nama kamu?");
   if (namaUser && namaUser.trim() !== "") {
     alert("Halo, " + namaUser + "!");
-  } else {
-    namaUser = "Pengunjung";
   }
 
   const homeSection = document.getElementById("home");
   if (homeSection) {
     const ucapan = document.createElement("p");
-    ucapan.textContent = "Haloo gess!! Selamat datang di halaman saya ya, " + namaUser + " 😄";
+    ucapan.textContent = "Haloo gess!! Selamat datang di halaman saya ya, " + namaUser;
     homeSection.appendChild(ucapan);
   }
 
@@ -18,24 +16,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const namaInput = document.getElementById("txtNama");
   if (namaInput) namaInput.value = namaUser;
+
+  const txtPesan = document.getElementById("txtPesan");
+  if (txtPesan) {
+    txtPesan.addEventListener("input", function () {
+      const panjang = this.value.length;
+      let counter = document.getElementById("charCount");
+      if (!counter) {
+        counter = document.createElement("small");
+        counter.id = "charCount";
+        this.parentElement.appendChild(counter);
+      }
+      counter.textContent = panjang + "/200 karakter";
+    });
+  }
 });
 
-const menuButton = document.getElementById("menuToggle");
 
+const menuButton = document.getElementById("menuToggle");
 menuButton.addEventListener("click", function () {
   const nav = document.querySelector("nav");
   nav.classList.toggle("active");
 
   if (nav.classList.contains("active")) {
-    this.textContent = "\u2716";
+    this.textContent = "\u2716"; 
   } else {
-    this.textContent = "\u2630";
+    this.textContent = "\u2630"; 
   }
 
   console.log("wulan dari cantik");
   document.getElementById("txtNama").value = "wulan dari memang cantik";
   document.getElementById("txtPesan").value = "monika ge cion wo";
 });
+
 
 document.querySelector("form").addEventListener("submit", function (e) {
   const nama = document.getElementById("txtNama");
@@ -74,6 +87,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
   }
 });
+
 
 function showError(inputElement, message) {
   const label = inputElement.closest("label");
