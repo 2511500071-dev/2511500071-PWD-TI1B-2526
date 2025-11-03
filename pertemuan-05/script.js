@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         counter.id = "charCount";
         this.parentElement.appendChild(counter);
       }
-      counter.textContent = panjang + "/200 karakter";
+      counter.textContent = "/200 karakter";
     });
   }
 });
@@ -43,7 +43,7 @@ menuButton.addEventListener("click", function () {
   } else {
     this.textContent = "\u2630"; 
   }
-  
+
 });
 
 
