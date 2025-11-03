@@ -43,10 +43,7 @@ menuButton.addEventListener("click", function () {
   } else {
     this.textContent = "\u2630"; 
   }
-
-  console.log("wulan dari cantik");
-  document.getElementById("txtNama").value = "wulan dari memang cantik";
-  document.getElementById("txtPesan").value = "monika ge cion wo";
+  
 });
 
 
