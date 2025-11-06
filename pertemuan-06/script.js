@@ -1,0 +1,127 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let namaUser = prompt("Siapa nama kamu?");
+  if (namaUser && namaUser.trim() !== "") {
+    alert("Halo, " + namaUser + "!");
+  }
+
+  const homeSection = document.getElementById("home");
+  if (homeSection) {
+    const ucapan = document.createElement("p");
+    ucapan.textContent =
+      "Haloo gess!! Selamat datang di halaman saya ya, " + namaUser;
+    homeSection.appendChild(ucapan);
+  }
+
+  const namaInput = document.getElementById("txtNama");
+  if (namaInput) namaInput.value = namaUser;
+
+  const txtPesan = document.getElementById("txtPesan");
+  if (txtPesan) {
+    txtPesan.addEventListener("input", function () {
+      const panjang = this.value.length;
+
+      const existingCounter = document.getElementById("charCount");
+      if (existingCounter) existingCounter.remove();
+
+      const counter = document.createElement("small");
+      counter.id = "charCount";
+      counter.style.display = "block";
+      counter.style.fontSize = "13px";
+      counter.style.color = "#ddd";
+      counter.style.marginTop = "4px";
+      counter.textContent = panjang + "/200 karakter";
+
+      this.insertAdjacentElement("afterend", counter);
+    });
+  }
+
+  const menuButton = document.getElementById("menuToggle");
+  if (menuButton) {
+    menuButton.addEventListener("click", function () {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("active");
+      this.textContent = nav.classList.contains("active") ? "\u2716" : "\u2630";
+    });
+  }
+
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      const nama = document.getElementById("txtNama");
+      const email = document.getElementById("txtEmail");
+      const pesan = document.getElementById("txtPesan");
+
+      document.querySelectorAll(".error-msg").forEach((el) => el.remove());
+      [nama, email, pesan].forEach((el) => (el.style.border = ""));
+
+      let isValid = true;
+
+      if (nama.value.trim().length < 3) {
+        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
+        isValid = false;
+      } else if (!/^[\p{L}\s]+$/u.test(nama.value)) {
+        showError(nama, "Nama hanya boleh diisi huruf dan spasi.");
+        isValid = false;
+      }
+
+      if (email.value.trim() === "") {
+        showError(email, "Email wajib diisi.");
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        showError(email, "Format email tidak valid. Contoh: nama@gmail.com");
+        isValid = false;
+      }
+
+      if (pesan.value.trim().length < 10) {
+        showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
+        isValid = false;
+      }
+
+      if (!isValid) e.preventDefault();
+      else alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
+    });
+  }
+
+  function showError(inputElement, message) {
+    const label = inputElement.closest("label");
+    if (!label) return;
+    label.style.flexWrap = "wrap";
+
+    const small = document.createElement("small");
+    small.className = "error-msg";
+    small.textContent = message;
+    small.style.color = "red";
+    small.style.fontSize = "14px";
+    small.style.display = "block";
+    small.style.marginTop = "4px";
+    small.style.flexBasis = "100%";
+    small.dataset.forId = inputElement.id;
+
+    label.appendChild(small);
+    inputElement.style.border = "1px solid red";
+    alignErrorMessage(small, inputElement);
+  }
+
+  function alignErrorMessage(smallEl, inputEl) {
+    const isMobile = window.matchMedia("(max-width: 600px)").matches;
+    if (isMobile) {
+      smallEl.style.marginLeft = "0";
+      smallEl.style.width = "100%";
+      return;
+    }
+    const label = inputEl.closest("label");
+    if (!label) return;
+    const rectLabel = label.getBoundingClientRect();
+    const rectInput = inputEl.getBoundingClientRect();
+    const offsetLeft = Math.max(0, Math.round(rectInput.left - rectLabel.left));
+    smallEl.style.marginLeft = offsetLeft + "px";
+    smallEl.style.width = Math.round(rectInput.width) + "px";
+  }
+
+  window.addEventListener("resize", () => {
+    document.querySelectorAll(".error-msg").forEach((small) => {
+      const target = document.getElementById(small.dataset.forId);
+      if (target) alignErrorMessage(small, target);
+    });
+  });
+});

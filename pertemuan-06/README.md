@@ -8,5 +8,6 @@ NAMA : Raja Rahmadhan Berniko<br>
 
 Hari ini, Kamis 30 Oktober 2025, saya belajar:
 <ol>
-  <li>echo hello.php</li>    
+  <li>echo di hello.php</li>
+  <li>copy index.html,style.css, script.js</li>   
 </li>
